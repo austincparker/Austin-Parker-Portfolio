@@ -8,7 +8,7 @@ function Initialize() {
 
   useEffect(() => {
     getProjects().then(setProjects);
-  });
+  }, []);
 
   return (
     <div className="App">
