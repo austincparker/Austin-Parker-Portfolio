@@ -1,0 +1,22 @@
+ {
+     "projects": {
+         "project 1": {
+             "name": "You Do 1",
+             "description": "A really cool app that does really cool stuff for you. You've never seen an app do the kind of cool stuff that this app does.",
+             "languages": "React, Javascript, HTML, CSS",
+             "other-tools": "Firebase, dbdiagram, figma",
+             "app-link": "https://you-do-react.netlify.app/",
+             "github-repo": "https://github.com/austincparker/YOU-DO-React",
+             "firebaseKey": "mnbvdjhkK-987234"
+         },
+         "project 2": {
+             "name": "vocab-YOU-lary",
+             "description": "A really cool app that does really cool stuff for you. You've never seen an app do the kind of cool stuff that this app does.",
+             "languages": "React, Javascript, HTML, CSS",
+             "other-tools": "Firebase",
+             "app-link": "https://acp-vocab-project.netlify.app/",
+             "github-repo": "https://github.com/austincparker/ASSESSMENT-vocab-YOU-lary",
+             "firebaseKey": "zxcvbnm-1234678"
+         }
+     }
+ }
