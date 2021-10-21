@@ -11,7 +11,7 @@ function Initialize() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App container">
       <Navigation />
       <Routes projects={projects} setProjects={setProjects} />
     </div>

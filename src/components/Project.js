@@ -8,28 +8,35 @@ import {
   CardText,
   CardTitle,
 } from 'reactstrap';
+import styled from 'styled-components';
 
+const ProjectCard = styled.div`
+  max-width: 380px;
+  p {
+    font-weight: 100;
+  }
+`;
 export default function Project({ project }) {
   return (
-    <div>
+    <ProjectCard className="mx-3">
       <Card>
         <CardBody>
-          <CardTitle tag="h5">{project.name}</CardTitle>
+          <CardTitle tag="h5" className="display-6">
+            {project.name}
+          </CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">
-            Card subtitle
+            {project.languages}
           </CardSubtitle>
+          <p>{project.otherTools}</p>
         </CardBody>
-        <img width="100%" src="/assets/318x180.svg" alt="Card cap" />
+        <img width="100%" src={project.imageUrl} alt="Card cap" />
         <CardBody>
-          <CardText>
-            Some quick example text to build on the card title and make up the
-            bulk of the cards content.
-          </CardText>
-          <CardLink href="#">Card Link</CardLink>
-          <CardLink href="#">Another Link</CardLink>
+          <CardText>{project.description}</CardText>
+          <CardLink href={project.appLink}>App Link</CardLink>
+          <CardLink href={project.githubRepo}>GitHub Repo</CardLink>
         </CardBody>
       </Card>
-    </div>
+    </ProjectCard>
   );
 }
 
@@ -37,7 +44,10 @@ Project.propTypes = {
   project: PropTypes.shape({
     name: PropTypes.string,
     description: PropTypes.string,
+    appLink: PropTypes.string,
+    imageUrl: PropTypes.string,
+    githubRepo: PropTypes.string,
     languages: PropTypes.string,
-    othertools: PropTypes.string,
+    otherTools: PropTypes.string,
   }).isRequired,
 };

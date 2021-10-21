@@ -4,15 +4,18 @@ import Project from '../components/Project';
 
 export default function ProjectView({ projects, setProjects }) {
   return (
-    <div>
+    <div className="text-center">
       <h1>Projects</h1>
-      {projects.map((project) => (
-        <Project
-          project={project}
-          projects={projects}
-          setProjects={setProjects}
-        />
-      ))}
+      <div className="container d-flex justify-content-center flex-wrap">
+        {projects.map((project) => (
+          <Project
+            key={project.firebaseKey}
+            project={project}
+            projects={projects}
+            setProjects={setProjects}
+          />
+        ))}
+      </div>
     </div>
   );
 }

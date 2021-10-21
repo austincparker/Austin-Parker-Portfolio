@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <div>
-      <h1>Welcome</h1>
+    <div className="text-center">
+      <img src="public/austin-parker.jpg" alt="austin-parker" />
     </div>
   );
 }
