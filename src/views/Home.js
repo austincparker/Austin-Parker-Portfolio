@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ProfPic = styled.div`
+  background: url(../../../acp-background.png);
+  border-radius: 1em;
   img {
     width: 300px;
     border-radius: 50%;
