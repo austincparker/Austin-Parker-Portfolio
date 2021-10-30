@@ -19,6 +19,34 @@ export default function Home() {
       </ProfPic>
       <div className="mt-3">
         <p>Prior coming to NSS, Austin worked in marketing and live events.</p>
+        <p>
+          On the side, he has been involved in photo & video editing, graphic
+          design, and music production for the last 9-10 years.
+        </p>
+        <p>
+          Since he had always been drawn to technology, he has learned all about
+          many kinds of software and has been learning the basics of coding over
+          the last few years.
+        </p>
+        <p>
+          This year, he decided to fully commit to a career as a web developer,
+          and was extremely thankful to be able to sign up for the NSS
+          Full-Stack Web Developer Bookcamp.
+        </p>
+        <p>
+          As of this point, Austin has almost completed the 6 month section of
+          front-end development, and is drawn to it, but he still has 6 months
+          of back-end training coming up.
+        </p>
+        <p>
+          Thank you for checking out this portfolio. It was made using the
+          basics we have been learning in class about React, and it will be
+          improved as I learn more.
+        </p>
+        <p>
+          The navbar at the top of the page will take you to some projects and
+          more about me. Thanks again!
+        </p>
         <a
           href="https://github.com/austincparker"
           target="_blank"
