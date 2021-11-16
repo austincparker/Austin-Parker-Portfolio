@@ -1,33 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ProfPic = styled.div`
-  background: url(../../../acp-background.png);
-  padding: 33px 0 33px 0;
-  border-radius: 1em;
-  img {
-    width: 300px;
-    border-radius: 50%;
+const OuterContainer = styled.div`
+  .prof-pic {
+    background: url(../../../acp-background.png);
+    padding: 33px 0 33px 0;
+    border-radius: 1em;
+    img {
+      width: 300px;
+      border-radius: 50%;
+    }
+  }
+
+  .intro-text {
+    background-color: #d7dee0;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 1em;
+    width: 80%;
   }
 `;
 
-const IntroText = styled.div`
-  background-color: #d7dee0;
-  margin: 10px auto;
-  padding: 10px;
-  border-radius: 1em;
-  width: 80%;
-`;
-
 export default function Home() {
+  // console.warn(useLocation());
   return (
-    <div className="text-center">
+    <OuterContainer className="text-center">
       <h5 className="display-5 mb-4">Austin Parker</h5>
-      <ProfPic>
+      <div className="prof-pic">
         <img src="../../../austin-parker.jpg" alt="austin-parker" />
-      </ProfPic>
+      </div>
       <div className="mt-3">
-        <IntroText>
+        <div className="intro-text">
           <p>
             Prior coming to NSS, Austin worked in marketing and live events.
           </p>
@@ -35,8 +38,8 @@ export default function Home() {
             On the side, he has been involved in photo & video editing, graphic
             design, and music production for the last 9-10 years.
           </p>
-        </IntroText>
-        <IntroText>
+        </div>
+        <div className="intro-text">
           <p>
             Since he had always been drawn to technology, he has learned all
             about many kinds of software and has been learning the basics of
@@ -47,8 +50,8 @@ export default function Home() {
             developer, and was extremely thankful to be able to sign up for the
             NSS Full-Stack Web Developer Bookcamp.
           </p>
-        </IntroText>
-        <IntroText>
+        </div>
+        <div className="intro-text">
           <p>
             As of this point, Austin has almost completed the 6 month section of
             front-end development, and he still has 6 months of back-end
@@ -59,11 +62,11 @@ export default function Home() {
             basics we have been learning in class about React, and it will be
             improved as I learn more.
           </p>
-        </IntroText>
-        <IntroText>
+        </div>
+        <div className="intro-text">
           The navbar at the top of the page will take you to some projects and
           more about me. Thanks again!
-        </IntroText>
+        </div>
         <a
           href="https://github.com/austincparker"
           target="_blank"
@@ -79,6 +82,6 @@ export default function Home() {
           <h6 className="display-6 text-muted">LinkedIn</h6>
         </a>
       </div>
-    </div>
+    </OuterContainer>
   );
 }
