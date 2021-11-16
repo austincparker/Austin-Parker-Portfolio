@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router';
 import PropTypes from 'prop-types';
 import Home from '../views/Home';
 import ProjectView from '../views/ProjectView';
-import About from '../views/About';
+import Contact from '../views/Contact';
 
 export default function Routes({ projects, setProjects }) {
   return (
@@ -17,7 +17,7 @@ export default function Routes({ projects, setProjects }) {
             <ProjectView projects={projects} setProjects={setProjects} />
           )}
         />
-        <Route exact path="/about" component={() => <About />} />
+        <Route exact path="/contact" component={() => <Contact />} />
       </Switch>
     </div>
   );

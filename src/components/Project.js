@@ -16,6 +16,7 @@ const ProjectCard = styled.div`
     font-weight: 100;
   }
 `;
+
 export default function Project({ project }) {
   return (
     <ProjectCard className="mx-3">
