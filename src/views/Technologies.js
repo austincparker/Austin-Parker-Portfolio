@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function About() {
+export default function Technologies() {
   return (
     <div className="text-center">
-      <h1 className="display-4">About</h1>
+      <h1 className="display-4">Technologies</h1>
     </div>
   );
 }

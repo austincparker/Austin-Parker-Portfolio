@@ -1,11 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
 import Project from '../components/Project';
+import getProjects from '../api/data/projectData';
 
-export default function ProjectView({ projects, setProjects }) {
+export default function ProjectView() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    getProjects().then(setProjects);
+  }, []);
+
   return (
     <div className="text-center">
-      <h1>Projects</h1>
+      <h1 className="display-4">Projects</h1>
       <div className="container d-flex justify-content-center flex-wrap">
         {projects.map((project) => (
           <Project
@@ -19,8 +25,3 @@ export default function ProjectView({ projects, setProjects }) {
     </div>
   );
 }
-
-ProjectView.propTypes = {
-  projects: PropTypes.arrayOf(PropTypes.object).isRequired,
-  setProjects: PropTypes.func.isRequired,
-};

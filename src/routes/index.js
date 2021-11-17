@@ -1,29 +1,21 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
-import PropTypes from 'prop-types';
 import Home from '../views/Home';
 import ProjectView from '../views/ProjectView';
+import Contact from '../views/Contact';
 import About from '../views/About';
+import Technologies from '../views/Technologies';
 
-export default function Routes({ projects, setProjects }) {
+export default function Routes() {
   return (
     <div>
       <Switch>
         <Route exact path="/" component={() => <Home />} />
-        <Route
-          exact
-          path="/projects"
-          component={() => (
-            <ProjectView projects={projects} setProjects={setProjects} />
-          )}
-        />
+        <Route exact path="/projects" component={() => <ProjectView />} />
         <Route exact path="/about" component={() => <About />} />
+        <Route exact path="/technologies" component={() => <Technologies />} />
+        <Route exact path="/contact" component={() => <Contact />} />
       </Switch>
     </div>
   );
 }
-
-Routes.propTypes = {
-  projects: PropTypes.arrayOf(PropTypes.object).isRequired,
-  setProjects: PropTypes.func.isRequired,
-};
