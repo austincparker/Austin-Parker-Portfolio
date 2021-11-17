@@ -15,7 +15,7 @@ const ApNav = styled.div`
 export default function Navigation() {
   return (
     <ApNav className="nav-container">
-      <Navbar color="light" expand="sm" light>
+      <Navbar expand="sm" light>
         <NavbarBrand href="/" className="text-muted">
           Intro
         </NavbarBrand>
