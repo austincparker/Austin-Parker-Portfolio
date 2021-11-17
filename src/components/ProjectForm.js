@@ -37,8 +37,7 @@ export default function ProjectForm({ obj }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    createProjects({ ...formInput });
-    history.push('/projects');
+    createProjects({ ...formInput }).then(() => history.push('/projects'));
   };
 
   return (
