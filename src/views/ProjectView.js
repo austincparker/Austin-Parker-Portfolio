@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Project from '../components/Project';
-import getProjects from '../api/data/projectData';
+import { getProjects } from '../api/data/projectData';
 
 export default function ProjectView() {
   const [projects, setProjects] = useState([]);

@@ -68,6 +68,7 @@ export default function ProjectForm({ obj }) {
                   value={formInput.name}
                   onChange={handleChange}
                   required
+                  className="m-2"
                 />
               </label>
             </div>
@@ -85,6 +86,7 @@ export default function ProjectForm({ obj }) {
                   value={formInput.languages}
                   onChange={handleChange}
                   required
+                  className="m-2"
                 />
               </label>
             </div>
@@ -102,6 +104,7 @@ export default function ProjectForm({ obj }) {
                   value={formInput.description}
                   onChange={handleChange}
                   required
+                  className="m-2"
                 />
               </label>
             </div>
@@ -119,6 +122,7 @@ export default function ProjectForm({ obj }) {
                   value={formInput.imageUrl}
                   onChange={handleChange}
                   required
+                  className="m-2"
                 />
               </label>
             </div>
@@ -136,6 +140,7 @@ export default function ProjectForm({ obj }) {
                   value={formInput.appLink}
                   onChange={handleChange}
                   required
+                  className="m-2"
                 />
               </label>
             </div>
@@ -153,6 +158,7 @@ export default function ProjectForm({ obj }) {
                   value={formInput.githubRepo}
                   onChange={handleChange}
                   required
+                  className="m-2"
                 />
               </label>
             </div>
@@ -170,6 +176,7 @@ export default function ProjectForm({ obj }) {
                   value={formInput.otherTools}
                   onChange={handleChange}
                   required
+                  className="m-2"
                 />
               </label>
             </div>
