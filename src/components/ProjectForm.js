@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router';
+import { createProjects } from '../api/data/projectData';
 
 const initialState = {
   firebaseKey: '',
@@ -25,10 +26,6 @@ export default function ProjectForm({ obj }) {
     }
   }, [obj]);
 
-  const resetForm = () => {
-    setFormInput(initialState);
-  };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -40,8 +37,7 @@ export default function ProjectForm({ obj }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.warn({ ...formInput });
-    resetForm();
+    createProjects({ ...formInput });
     history.push('/projects');
   };
 
@@ -93,11 +89,11 @@ export default function ProjectForm({ obj }) {
             <div>
               <label htmlFor="description">
                 Description
-                <input
+                <textarea
                   style={{
                     border: '2px solid black',
-                    height: '2.5rem',
                     width: '30rem',
+                    height: '6rem',
                   }}
                   id="description"
                   name="description"
