@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <OuterContainer className="text-center">
       <div className="prof-pic rounded-bottom">
-        <img src="../../../austin-parker.jpg" alt="austin-parker" />
+        <img src="../../../austin-parker.png" alt="austin-parker" />
       </div>
       <div className="mt-3">
         <div className="intro-text">
