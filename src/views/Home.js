@@ -5,7 +5,6 @@ const OuterContainer = styled.div`
   .prof-pic {
     background: url(../../../acp-background.png);
     padding: 33px 0 33px 0;
-    border-radius: 1em;
     img {
       width: 300px;
       border-radius: 50%;
@@ -25,8 +24,7 @@ export default function Home() {
   // console.warn(useLocation());
   return (
     <OuterContainer className="text-center">
-      <h5 className="display-5 mb-4">Austin Parker</h5>
-      <div className="prof-pic">
+      <div className="prof-pic rounded-bottom">
         <img src="../../../austin-parker.jpg" alt="austin-parker" />
       </div>
       <div className="mt-3">
