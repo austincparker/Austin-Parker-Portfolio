@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Nav, Navbar, NavbarBrand, NavItem, NavLink,
 } from 'reactstrap';
+import { useLocation } from 'react-router';
 import styled from 'styled-components';
 
 const ApNav = styled.div`
@@ -13,6 +14,28 @@ const ApNav = styled.div`
 `;
 
 export default function Navigation() {
+  const [aboutBg, setAbNavBg] = useState('');
+  const [aboutBorder, setAbBorder] = useState('');
+  const [projBg, setPrNavBg] = useState('');
+  const [projBorder, setPrBorder] = useState('');
+  const [techBg, setTeNavBg] = useState('');
+  const [techBorder, setTeBorder] = useState('');
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === '/about') {
+      setAbNavBg('white');
+      setAbBorder('1px solid black');
+    } else if (location.pathname === '/projects') {
+      setPrNavBg('white');
+      setPrBorder('1px solid black');
+    } else if (location.pathname === '/technologies') {
+      setTeNavBg('white');
+      setTeBorder('1px solid black');
+    }
+  }, [location]);
+
+  console.warn(location.pathname);
   return (
     <ApNav className="nav-container">
       <Navbar expand="sm" light>
@@ -21,13 +44,37 @@ export default function Navigation() {
         </NavbarBrand>
         <Nav className="m-auto" navbar>
           <NavItem className="ap-nav">
-            <NavLink href="/about">About</NavLink>
+            <NavLink
+              href="/about"
+              style={{
+                background: aboutBg,
+                border: aboutBorder,
+              }}
+            >
+              About
+            </NavLink>
           </NavItem>
           <NavItem className="ap-nav">
-            <NavLink href="/projects">Projects</NavLink>
+            <NavLink
+              href="/projects"
+              style={{
+                background: projBg,
+                border: projBorder,
+              }}
+            >
+              Projects
+            </NavLink>
           </NavItem>
           <NavItem className="ap-nav">
-            <NavLink href="/technologies">Technologies</NavLink>
+            <NavLink
+              href="/technologies"
+              style={{
+                background: techBg,
+                border: techBorder,
+              }}
+            >
+              Technologies
+            </NavLink>
           </NavItem>
         </Nav>
         <NavbarBrand href="/contact" className="text-muted">
