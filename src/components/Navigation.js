@@ -49,6 +49,7 @@ export default function Navigation() {
               style={{
                 background: aboutBg,
                 border: aboutBorder,
+                borderRadius: '1rem',
               }}
             >
               About
@@ -60,6 +61,7 @@ export default function Navigation() {
               style={{
                 background: projBg,
                 border: projBorder,
+                borderRadius: '1rem',
               }}
             >
               Projects
@@ -71,6 +73,7 @@ export default function Navigation() {
               style={{
                 background: techBg,
                 border: techBorder,
+                borderRadius: '1rem',
               }}
             >
               Technologies
