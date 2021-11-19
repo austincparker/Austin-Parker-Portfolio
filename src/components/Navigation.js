@@ -3,15 +3,6 @@ import {
   Nav, Navbar, NavbarBrand, NavItem, NavLink,
 } from 'reactstrap';
 import { useLocation } from 'react-router';
-import styled from 'styled-components';
-
-const ApNav = styled.div`
-  background-color: whitesmoke;
-
-  Navbar {
-    color: blue;
-  }
-`;
 
 export default function Navigation() {
   const [aboutBg, setAbNavBg] = useState('');
@@ -37,7 +28,7 @@ export default function Navigation() {
 
   console.warn(location.pathname);
   return (
-    <ApNav className="nav-container">
+    <div className="nav-container">
       <Navbar expand="sm" light>
         <NavbarBrand href="/" className="text-muted">
           Intro
@@ -49,6 +40,7 @@ export default function Navigation() {
               style={{
                 background: aboutBg,
                 border: aboutBorder,
+                borderRadius: '1rem',
               }}
             >
               About
@@ -60,6 +52,7 @@ export default function Navigation() {
               style={{
                 background: projBg,
                 border: projBorder,
+                borderRadius: '1rem',
               }}
             >
               Projects
@@ -71,6 +64,7 @@ export default function Navigation() {
               style={{
                 background: techBg,
                 border: techBorder,
+                borderRadius: '1rem',
               }}
             >
               Technologies
@@ -81,6 +75,6 @@ export default function Navigation() {
           Contact
         </NavbarBrand>
       </Navbar>
-    </ApNav>
+    </div>
   );
 }
