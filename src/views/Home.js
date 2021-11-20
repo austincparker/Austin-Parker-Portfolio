@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const OuterContainer = styled.div`
   .prof-pic {
-    background: url(../../../acp-background.png);
+    background: url(../../../imgs/acp-background.png);
     padding: 33px 0 33px 0;
     img {
       width: 300px;
@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <OuterContainer className="text-center">
       <div className="prof-pic rounded-bottom">
-        <img src="../../../austin-parker.png" alt="austin-parker" />
+        <img src="../../../imgs/austin-parker.png" alt="austin-parker" />
       </div>
       <div className="mt-3">
         <div className="intro-text">
