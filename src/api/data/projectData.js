@@ -24,4 +24,11 @@ const createProjects = (obj) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getProjects, createProjects };
+const deleteProject = (firebaseKey) => new Promise((resolve, reject) => {
+  axios
+    .delete(`${baseURL}/projects/${firebaseKey}.json`)
+    .then(() => getProjects().then(resolve))
+    .catch(reject);
+});
+
+export { getProjects, createProjects, deleteProject };

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
+  Button,
+  ButtonGroup,
   Card,
   CardBody,
   CardLink,
@@ -9,6 +11,8 @@ import {
   CardTitle,
 } from 'reactstrap';
 import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
+import { deleteProject, getProjects } from '../api/data/projectData';
 
 const ProjectCard = styled.div`
   max-width: 380px;
@@ -17,7 +21,16 @@ const ProjectCard = styled.div`
   }
 `;
 
-export default function Project({ project }) {
+export default function Project({ project, setProjects }) {
+  const history = useHistory();
+  const handleButton = (method) => {
+    if (method === 'delete') {
+      deleteProject(project.firebaseKey).then(() => getProjects().then(setProjects));
+    } else if (method === 'edit') {
+      console.warn(project.firebaseKey);
+    }
+  };
+
   return (
     <ProjectCard className="mx-3">
       <Card>
@@ -35,6 +48,19 @@ export default function Project({ project }) {
           <CardText>{project.description}</CardText>
           <CardLink href={project.appLink}>App Link</CardLink>
           <CardLink href={project.githubRepo}>GitHub Repo</CardLink>
+          <div>
+            <ButtonGroup>
+              <Button
+                color="info"
+                onClick={() => history.push(`/edit${project.firebaseKey}`)}
+              >
+                Edit
+              </Button>
+              <Button color="danger" onClick={() => handleButton('delete')}>
+                Delete
+              </Button>
+            </ButtonGroup>
+          </div>
         </CardBody>
       </Card>
     </ProjectCard>
@@ -43,6 +69,7 @@ export default function Project({ project }) {
 
 Project.propTypes = {
   project: PropTypes.shape({
+    firebaseKey: PropTypes.string,
     name: PropTypes.string,
     description: PropTypes.string,
     appLink: PropTypes.string,
@@ -51,4 +78,5 @@ Project.propTypes = {
     languages: PropTypes.string,
     otherTools: PropTypes.string,
   }).isRequired,
+  setProjects: PropTypes.func.isRequired,
 };
