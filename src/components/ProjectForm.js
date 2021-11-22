@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router';
-import { createProjects } from '../api/data/projectData';
+import { createProject, updateProject } from '../api/data/projectData';
 
 const initialState = {
   firebaseKey: '',
@@ -35,9 +35,20 @@ export default function ProjectForm({ obj }) {
     }));
   };
 
+  const resetForm = () => {
+    setFormInput(initialState);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    createProjects({ ...formInput }).then(() => history.push('/projects'));
+    if (obj.firebaseKey) {
+      updateProject(obj.firebaseKey, formInput).then(() => {
+        resetForm();
+        history.push('/projects');
+      });
+    } else {
+      createProject({ ...formInput }).then(() => history.push('/projects'));
+    }
   };
 
   return (
