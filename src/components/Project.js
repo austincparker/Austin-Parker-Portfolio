@@ -52,7 +52,7 @@ export default function Project({ project, setProjects }) {
             <ButtonGroup>
               <Button
                 color="info"
-                onClick={() => history.push(`/edit${project.firebaseKey}`)}
+                onClick={() => history.push(`/edit/${project.firebaseKey}`)}
               >
                 Edit
               </Button>

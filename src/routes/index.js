@@ -18,7 +18,7 @@ export default function Routes() {
         <Route exact path="/technologies" component={() => <Technologies />} />
         <Route exact path="/contact" component={() => <Contact />} />
         <Route exact path="/create" component={() => <Create />} />
-        <Route exact path="/edit" component={() => <Edit />} />
+        <Route exact path="/edit/:key" component={() => <Edit />} />
       </Switch>
     </div>
   );
