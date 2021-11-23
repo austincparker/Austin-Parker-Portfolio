@@ -22,7 +22,7 @@ export default function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav m-auto">
-              <Link className="nav-link active" aria-current="page" to="/about">
+              <Link className="nav-link" aria-current="page" to="/about">
                 About
               </Link>
               <Link className="nav-link" to="/projects">
