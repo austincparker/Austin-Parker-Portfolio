@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
+  const currentRoute = useLocation().pathname.toLowerCase();
   return (
     <div className="nav-container">
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -22,13 +23,35 @@ export default function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav m-auto">
-              <Link className="nav-link" aria-current="page" to="/about">
+              <Link
+                className={
+                  currentRoute.includes('about')
+                    ? 'tab active tab-bar nav-link'
+                    : 'tab tab-bar nav-link'
+                }
+                aria-current="page"
+                to="/about"
+              >
                 About
               </Link>
-              <Link className="nav-link" to="/projects">
+              <Link
+                className={
+                  currentRoute.includes('projects')
+                    ? 'tab active tab-bar nav-link'
+                    : 'nav-link'
+                }
+                to="/projects"
+              >
                 Projects
               </Link>
-              <Link className="nav-link" to="/technologies">
+              <Link
+                className={
+                  currentRoute.includes('technologies')
+                    ? 'tab active tab-bar nav-link'
+                    : 'tab tab-bar nav-link'
+                }
+                to="/technologies"
+              >
                 Technologies
               </Link>
             </div>

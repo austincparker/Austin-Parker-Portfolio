@@ -6,7 +6,7 @@ export default function SingleProject({ obj }) {
   return (
     <div>
       <h1>Single Project {obj.name}</h1>
-      <img alt={obj.name} src={obj.imageUrl} />
+      <img width="666px" alt={obj.name} src={obj.imageUrl} />
       <h5>{obj.description}</h5>
       <h5>{obj.languages}</h5>
       <h5>{obj.otherTools}</h5>
