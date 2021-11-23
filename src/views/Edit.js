@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import { getSingleProject } from '../api/data/projectData';
 import ProjectForm from '../components/ProjectForm';
 
@@ -15,6 +16,7 @@ export default function Edit() {
     <div>
       <h1 className="display-3">Edit Project - {editItem.name}</h1>
       <ProjectForm obj={editItem} />
+      <Link to="/projects">Back to Projects</Link>
     </div>
   );
 }

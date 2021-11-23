@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import Project from '../components/Project';
 import { getProjects } from '../api/data/projectData';
 
-export default function ProjectView() {
+export default function ProjectView({ admin }) {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -19,9 +20,17 @@ export default function ProjectView() {
             project={project}
             projects={projects}
             setProjects={setProjects}
+            admin={admin}
           />
         ))}
       </div>
     </div>
   );
 }
+
+ProjectView.defaultProps = {
+  admin: null,
+};
+ProjectView.propTypes = {
+  admin: PropTypes.shape(PropTypes.obj),
+};

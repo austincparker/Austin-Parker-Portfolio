@@ -10,4 +10,18 @@ const getTech = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export default getTech;
+const createTech = (obj) => new Promise((resolve, reject) => {
+  axios
+    .post(`${baseURL}/tech.json`, obj)
+    .then((response) => {
+      const firebaseKey = response.data.name;
+      axios
+        .patch(`${baseURL}/tech/${firebaseKey}.json`, { firebaseKey })
+        .then(() => {
+          getTech().then(resolve);
+        });
+    })
+    .catch(reject);
+});
+
+export { getTech, createTech };
