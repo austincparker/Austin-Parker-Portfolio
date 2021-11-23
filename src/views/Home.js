@@ -13,7 +13,6 @@ const OuterContainer = styled.div`
 `;
 
 export default function Home() {
-  // console.warn(useLocation());
   return (
     <OuterContainer className="text-center">
       <div className="prof-pic rounded-bottom">
