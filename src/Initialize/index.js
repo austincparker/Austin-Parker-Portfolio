@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import firebase from 'firebase/app';
-import Navbar from '../components/Navbar';
+import ApNavbar from '../components/ApNavbar';
 import Routes from '../routes';
 import SignIn from '../views/SignIn';
+import firebaseConfig from '../api/apiKeys';
 
 function Initialize() {
+  const [admin, setAdmin] = useState(null);
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -15,8 +17,12 @@ function Initialize() {
           uid: authed.uid,
         };
         setUser(userInfoObj);
+        if (userInfoObj.uid === firebaseConfig.adminUser) {
+          setAdmin(userInfoObj);
+        }
       } else if (user || user === null) {
         setUser(false);
+        setAdmin(false);
       }
     });
   }, []);
@@ -25,11 +31,15 @@ function Initialize() {
     <div className="App container">
       {user ? (
         <>
-          <Navbar />
-          <Routes user={user} />
+          <ApNavbar />
+          <Routes user={user} admin={admin} />
         </>
       ) : (
-        <SignIn user={user} />
+        <>
+          <ApNavbar />
+          <Routes user={user} admin={admin} />
+          <SignIn user={user} />
+        </>
       )}
     </div>
   );
