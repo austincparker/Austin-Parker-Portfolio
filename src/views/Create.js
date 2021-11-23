@@ -1,40 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import firebase from 'firebase/app';
+import React from 'react';
 import 'firebase/auth';
+import PropTypes from 'prop-types';
 import ProjectForm from '../components/ProjectForm';
-import SignIn from './SignIn';
-import SignOut from './SignOut';
 
-export default function Create() {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    firebase.auth().onAuthStateChanged((authed) => {
-      if (authed) {
-        const userInfoObj = {
-          fullName: authed.displayName,
-          uid: authed.uid,
-        };
-        setUser(userInfoObj);
-      } else if (user || user === null) {
-        setUser(false);
-      }
-    });
-  }, []);
-
+export default function Create({ user }) {
   return (
     <div>
       <h1>Create</h1>
-      {user ? (
-        <>
-          <ProjectForm />
-          <SignOut />
-        </>
-      ) : (
-        <>
-          <SignIn user={user} />
-        </>
-      )}
+      <ProjectForm user={user} />)
     </div>
   );
 }
+
+Create.defaultProps = {
+  user: null,
+};
+Create.propTypes = {
+  user: PropTypes.node,
+};

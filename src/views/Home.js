@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import SignOut from './SignOut';
 
 const OuterContainer = styled.div`
   .prof-pic {
@@ -19,6 +20,7 @@ export default function Home() {
       <div className="prof-pic rounded-bottom">
         <img src="../../../imgs/austin-parker.png" alt="austin-parker" />
       </div>
+      <SignOut />
     </OuterContainer>
   );
 }
