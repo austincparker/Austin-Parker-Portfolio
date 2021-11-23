@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import getTech from '../api/data/techData';
+import { getTech } from '../api/data/techData';
 import TechGalleryItem from '../components/TechGallery';
 
 export default function Technologies() {
