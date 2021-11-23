@@ -1,11 +1,11 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
+import Navbar from '../components/Navbar';
 import Routes from '../routes';
 
 function Initialize() {
   return (
     <div className="App container">
-      <Navigation />
+      <Navbar />
       <Routes />
     </div>
   );
