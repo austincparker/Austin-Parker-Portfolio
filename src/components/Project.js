@@ -27,7 +27,9 @@ export default function Project({ project, setProjects }) {
     if (method === 'delete') {
       deleteProject(project.firebaseKey).then(() => getProjects().then(setProjects));
     } else if (method === 'edit') {
-      console.warn(project.firebaseKey);
+      history.push(`/edit/${project.firebaseKey}`);
+    } else if (method === 'info') {
+      history.push(`/projects/${project.firebaseKey}`);
     }
   };
 
@@ -50,14 +52,14 @@ export default function Project({ project, setProjects }) {
           <CardLink href={project.githubRepo}>GitHub Repo</CardLink>
           <div>
             <ButtonGroup>
-              <Button
-                color="info"
-                onClick={() => history.push(`/edit/${project.firebaseKey}`)}
-              >
+              <Button color="info" onClick={() => handleButton('edit')}>
                 Edit
               </Button>
               <Button color="danger" onClick={() => handleButton('delete')}>
                 Delete
+              </Button>
+              <Button color="success" onClick={() => handleButton('info')}>
+                More Info
               </Button>
             </ButtonGroup>
           </div>

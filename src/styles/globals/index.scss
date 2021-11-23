@@ -1,1 +1,16 @@
 @import 'variables';
+
+body {
+  background: $bkg-color;
+}
+
+.tab {
+  color: white;
+}
+
+.tab:hover,
+.tab:active {
+  background: white;
+  border-radius: 5px;
+  font-weight: 500;
+}

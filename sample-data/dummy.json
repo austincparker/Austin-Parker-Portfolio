@@ -14,7 +14,7 @@
              "name": "vocab-YOU-lary",
              "description": "A vocabulary card app where a user can create, read, update, and delete vocabulary words",
              "languages": "Webpack, Javascript, HTML, CSS",
-             "imageUrl": "https://user-images.githubusercontent.com/70224936/138311599-0d127273-6750-4662-81f0-493d7505bd86.png",
+             "imageUrl": "https://github.com/austincparker/acp-portfolio/blob/main/public/imgs/project-logos/Vocab-YOU-Lary.png?raw=true",
              "otherTools": "Firebase, Bootstrap",
              "appLink": "https://acp-vocab-project.netlify.app/",
              "githubRepo": "https://github.com/austincparker/ASSESSMENT-vocab-YOU-lary",
@@ -24,11 +24,28 @@
             "name": "Hip-Hop, Pizza, and Wangs",
             "description": "A restaurant POS App where a user can place an order for a customer, then edit or delete that order. The user can also take payment and see revenue totals within the app. This was a group project.",
             "languages": "Webpack, Javascript, HTML, CSS",
-            "imageUrl": "https://user-images.githubusercontent.com/70224936/134779574-d97f7f98-662d-49be-819f-49845ee1e538.png",
+            "imageUrl": "https://github.com/nss-evening-cohort-16/hip-hop-pizza-and-wangs-to-hair-or-not-to-hair/blob/dev/src/assets/images/hhpw-record.png?raw=true",
             "otherTools": "Firebase, Bootstrap",
             "appLink": "https://hip-hop-pizza-and-wangs-thonth.netlify.app/",
             "githubRepo": "https://github.com/nss-evening-cohort-16/hip-hop-pizza-and-wangs-to-hair-or-not-to-hair",
             "firebaseKey": "avklasd-324234"
+        }
+     },
+     "tech": {
+        "akjasdf2021": {
+            "name": "Javascript",
+            "firebaseKey": "akjasdf2021",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+        },
+        "bkjasdf2022": {
+            "name": "Javascript",
+            "firebaseKey": "bkjasdf2022",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+        },
+        "ckjasdf2023": {
+            "name": "Javascript",
+            "firebaseKey": "ckjasdf2023",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
         }
      }
  }

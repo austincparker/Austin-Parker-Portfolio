@@ -7,6 +7,7 @@ import About from '../views/About';
 import Technologies from '../views/Technologies';
 import Create from '../views/Create';
 import Edit from '../views/Edit';
+import MoreInfo from '../views/MoreInfo';
 
 export default function Routes() {
   return (
@@ -19,6 +20,7 @@ export default function Routes() {
         <Route exact path="/contact" component={() => <Contact />} />
         <Route exact path="/create" component={() => <Create />} />
         <Route exact path="/edit/:key" component={() => <Edit />} />
+        <Route exact path="/projects/:key" component={() => <MoreInfo />} />
       </Switch>
     </div>
   );
