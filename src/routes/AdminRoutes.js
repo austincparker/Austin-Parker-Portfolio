@@ -35,5 +35,5 @@ AdminRoutes.defaultProps = {
   admin: null,
 };
 AdminRoutes.propTypes = {
-  admin: PropTypes.node,
+  admin: PropTypes.shape(PropTypes.obj),
 };

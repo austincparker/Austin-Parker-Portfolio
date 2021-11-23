@@ -3,11 +3,14 @@ import PropTypes from 'prop-types';
 import AdminRoutes from './AdminRoutes';
 import PublicRoutes from './PublicRoutes';
 
-export default function Routes({ user, admin }) {
+export default function Routes({ admin, user }) {
   return (
     <div>
-      {admin ? <AdminRoutes admin={admin} user={user} /> : ''}{' '}
-      <PublicRoutes user={user} />
+      {admin ? (
+        <AdminRoutes admin={admin} user={user} />
+      ) : (
+        <PublicRoutes user={user} />
+      )}
     </div>
   );
 }

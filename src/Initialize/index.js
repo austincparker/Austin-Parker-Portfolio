@@ -3,6 +3,7 @@ import firebase from 'firebase/app';
 import ApNavbar from '../components/ApNavbar';
 import Routes from '../routes';
 import SignIn from '../views/SignIn';
+import SignOut from '../views/SignOut';
 import firebaseConfig from '../api/apiKeys';
 
 function Initialize() {
@@ -22,7 +23,7 @@ function Initialize() {
         }
       } else if (user || user === null) {
         setUser(false);
-        setAdmin(false);
+        setAdmin(null);
       }
     });
   }, []);
@@ -32,12 +33,13 @@ function Initialize() {
       {user ? (
         <>
           <ApNavbar />
-          <Routes user={user} admin={admin} />
+          <Routes admin={admin} user={user} />
+          <SignOut />
         </>
       ) : (
         <>
           <ApNavbar />
-          <Routes user={user} admin={admin} />
+          <Routes admin={admin} user={user} />
           <SignIn user={user} />
         </>
       )}

@@ -1,7 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import SignOut from './SignOut';
 
 const OuterContainer = styled.div`
   .prof-pic {
@@ -14,22 +12,12 @@ const OuterContainer = styled.div`
   }
 `;
 
-export default function Home({ user }) {
-  console.warn(user.fullName);
+export default function Home() {
   return (
     <OuterContainer className="text-center">
       <div className="prof-pic rounded-bottom">
         <img src="../../../imgs/austin-parker.png" alt="austin-parker" />
       </div>
-      {!user ? <div>hi</div> : <SignOut />}
     </OuterContainer>
   );
 }
-
-Home.propTypes = {
-  user: PropTypes.shape(PropTypes.obj),
-};
-
-Home.defaultProps = {
-  user: {},
-};
