@@ -39,7 +39,11 @@ export default function AdminRoutes({ admin }) {
           component={() => <AddTech admin={admin} />}
         />
         <Route exact path="/edit/:key" component={() => <Edit />} />
-        <Route exact path="/projects/:key" component={() => <MoreInfo />} />
+        <Route
+          exact
+          path="/projects/:key"
+          component={() => <MoreInfo admin={admin} />}
+        />
       </Switch>
     </div>
   );
