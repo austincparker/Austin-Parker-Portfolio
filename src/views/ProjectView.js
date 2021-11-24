@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import Project from '../components/Project';
 import { getProjects } from '../api/data/projectData';
 
@@ -24,6 +25,13 @@ export default function ProjectView({ admin }) {
           />
         ))}
       </div>
+      {admin ? (
+        <Link className="" to="/create">
+          Create a Project
+        </Link>
+      ) : (
+        ''
+      )}
     </div>
   );
 }

@@ -7,7 +7,7 @@ export default function Create({ user }) {
   return (
     <div>
       <h1>Create</h1>
-      <ProjectForm user={user} />)
+      <ProjectForm user={user} />
     </div>
   );
 }

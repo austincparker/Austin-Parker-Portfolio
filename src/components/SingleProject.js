@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 export default function SingleProject({ obj }) {
   return (
-    <div>
-      <h1>Single Project {obj.name}</h1>
+    <div className="m-auto text-center">
       <img width="666px" alt={obj.name} src={obj.imageUrl} />
+      <h1>{obj.name}</h1>
       <h5>{obj.description}</h5>
       <h5>{obj.languages}</h5>
       <h5>{obj.otherTools}</h5>
