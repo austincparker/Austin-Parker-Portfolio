@@ -24,12 +24,21 @@ const BioCont = styled.div`
 export default function Bio() {
   return (
     <BioCont>
-      <div className="intro-text-right">
-        <p>Prior coming to NSS, Austin worked in marketing and live events.</p>
-        <p>
-          On the side, he has been involved in photo & video editing, graphic
-          design, and music production for the last 9-10 years.
-        </p>
+      <div className="d-flex">
+        <img
+          width="200px"
+          alt="home studio"
+          src="../../../imgs/home-studio.png"
+        />
+        <div className="intro-text-right">
+          <p>
+            Prior coming to NSS, Austin worked in marketing and live events.
+          </p>
+          <p>
+            On the side, he has been involved in photo & video editing, graphic
+            design, and music production for the last 9-10 years.
+          </p>
+        </div>
       </div>
       <div className="intro-text-left">
         <p>

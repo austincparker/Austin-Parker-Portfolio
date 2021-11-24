@@ -34,7 +34,7 @@ export default function Project({ project, setProjects, admin }) {
   };
 
   return (
-    <ProjectCard className="mx-3">
+    <ProjectCard className="m-3">
       <Card>
         <CardBody>
           <CardTitle tag="h5" className="display-6">

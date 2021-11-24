@@ -24,4 +24,11 @@ const createTech = (obj) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getTech, createTech };
+const deleteTech = (firebaseKey) => new Promise((resolve, reject) => {
+  axios
+    .delete(`${baseURL}/tech/${firebaseKey}.json`)
+    .then(() => getTech().then(resolve))
+    .catch(reject);
+});
+
+export { getTech, createTech, deleteTech };

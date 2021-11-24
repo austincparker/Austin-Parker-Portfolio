@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { getTech } from '../api/data/techData';
 import TechGalleryItem from '../components/TechGallery';
 
-export default function Technologies() {
+export default function Technologies({ admin }) {
   const [tech, setTech] = useState([]);
 
   useEffect(() => {
@@ -19,9 +21,25 @@ export default function Technologies() {
             tech={tech}
             setTech={setTech}
             techItem={techItem}
+            admin={admin}
           />
         ))}
       </div>
+      {admin ? (
+        <Link className="" to="/addtech">
+          Create a Tech Item
+        </Link>
+      ) : (
+        ''
+      )}
     </div>
   );
 }
+
+Technologies.defaultProps = {
+  admin: null,
+};
+
+Technologies.propTypes = {
+  admin: PropTypes.shape(PropTypes.obj),
+};

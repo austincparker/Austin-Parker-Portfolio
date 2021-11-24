@@ -22,7 +22,11 @@ export default function AdminRoutes({ admin }) {
           component={() => <ProjectView admin={admin} />}
         />
         <Route exact path="/about" component={() => <About />} />
-        <Route exact path="/technologies" component={() => <Technologies />} />
+        <Route
+          exact
+          path="/technologies"
+          component={() => <Technologies admin={admin} />}
+        />
         <Route exact path="/contact" component={() => <Contact />} />
         <Route
           exact
@@ -35,7 +39,11 @@ export default function AdminRoutes({ admin }) {
           component={() => <AddTech admin={admin} />}
         />
         <Route exact path="/edit/:key" component={() => <Edit />} />
-        <Route exact path="/projects/:key" component={() => <MoreInfo />} />
+        <Route
+          exact
+          path="/projects/:key"
+          component={() => <MoreInfo admin={admin} />}
+        />
       </Switch>
     </div>
   );

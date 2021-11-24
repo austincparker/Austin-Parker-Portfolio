@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/js/src/collapse';
 
 export default function ApNavbar() {
   const currentRoute = useLocation().pathname.toLowerCase();
@@ -55,10 +57,10 @@ export default function ApNavbar() {
                 Technologies
               </Link>
             </div>
-            <Link className="navbar-brand" to="/contact">
-              Contact
-            </Link>
           </div>
+          <Link className="navbar-brand" to="/contact">
+            Contact
+          </Link>
         </div>
       </nav>
     </div>
