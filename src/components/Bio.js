@@ -6,6 +6,8 @@ const BioCont = styled.div`
     background-color: white;
     text-align: left;
     padding: 30px;
+    border: 2px solid grey;
+    border-radius: 1em;
   }
 
   .bio-pic {
