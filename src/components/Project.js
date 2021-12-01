@@ -7,7 +7,6 @@ import {
   CardBody,
   CardLink,
   CardSubtitle,
-  CardText,
   CardTitle,
 } from 'reactstrap';
 import styled from 'styled-components';
@@ -47,7 +46,7 @@ export default function Project({ project, setProjects, admin }) {
         </CardBody>
         <img width="100%" src={project.imageUrl} alt="Card cap" />
         <CardBody>
-          <CardText>{project.description}</CardText>
+          {/* <CardText>{project.description}</CardText> */}
           <CardLink href={project.appLink}>App Link</CardLink>
           <CardLink href={project.githubRepo}>GitHub Repo</CardLink>
           <div>

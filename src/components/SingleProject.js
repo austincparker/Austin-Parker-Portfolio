@@ -27,8 +27,8 @@ export default function SingleProject({ obj, admin }) {
       <Card>
         <img
           className="m-auto"
-          width="500px"
-          src={obj.imageUrl}
+          width="800px"
+          src={obj.screenShot}
           alt="Card cap"
         />
         <CardBody>
@@ -75,10 +75,10 @@ export default function SingleProject({ obj, admin }) {
 
 SingleProject.propTypes = {
   obj: PropTypes.shape(PropTypes.obj),
-  admin: null,
+  admin: PropTypes.shape(PropTypes.obj),
 };
 
 SingleProject.defaultProps = {
   obj: {},
-  admin: PropTypes.shape(PropTypes.obj),
+  admin: null,
 };
