@@ -11,7 +11,7 @@ const BioCont = styled.div`
   }
 
   .bio-pic {
-    max-width: 300px;
+    width: 100%;
   }
 `;
 
@@ -20,14 +20,14 @@ export default function Bio() {
     <BioCont>
       <div className="container">
         <div className="row">
-          <div className="col-md-4 col-sm-12">
+          <div className="col-lg-3">
             <img
               alt="home studio"
               src="../../../imgs/home-studio.png"
               className="bio-pic"
             />
           </div>
-          <div className="col-md-8 col-sm-12 bio-text">
+          <div className="col-lg-9 bio-text">
             <blockquote>
               Prior coming to NSS, Austin worked in marketing and live events.
             </blockquote>

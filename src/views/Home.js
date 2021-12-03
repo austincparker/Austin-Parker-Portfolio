@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="text-center container">
       <div
-        className="prof-pic-bkg rounded-bottom row align-items-center"
+        className="prof-pic-bkg row align-items-center"
         style={{ background: 'url(../../../imgs/acp-background.png)' }}
       >
         <div className="col-md-6 prof-pic-circ">

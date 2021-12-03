@@ -27,7 +27,7 @@ export default function SingleProject({ obj, admin }) {
       <Card>
         <img
           className="m-auto"
-          width="800px"
+          width="80%"
           src={obj.screenShot}
           alt="Card cap"
         />
