@@ -13,7 +13,6 @@ export default function Technologies({ admin }) {
 
   return (
     <div className="text-center">
-      <h1 className="display-4">Technologies</h1>
       <div className="container d-flex justify-content-center flex-wrap">
         {tech.map((techItem) => (
           <TechGalleryItem

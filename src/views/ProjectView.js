@@ -13,7 +13,6 @@ export default function ProjectView({ admin }) {
 
   return (
     <div className="text-center">
-      <h1 className="display-4">Projects</h1>
       <div className="container d-flex justify-content-center flex-wrap">
         {projects.map((project) => (
           <Project
