@@ -14,3 +14,30 @@ body {
   border-radius: 5px;
   font-weight: 500;
 }
+
+.prof-pic-circ {
+  text-align: left;
+}
+
+.prof-pic {
+  width: 300px;
+  border-radius: 50%;
+  margin: 40px 40px 40px 10px;
+}
+
+.hobbies {
+  color: white;
+  margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .prof-pic-circ {
+    margin: 20px;
+    text-align: center;
+  }
+.hobbies {
+  text-align: center;
+  color: $primary-color;
+  margin-bottom: 30px;
+}
+}
