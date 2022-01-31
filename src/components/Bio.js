@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -29,21 +30,28 @@ export default function Bio() {
           </div>
           <div className="col-lg-9 bio-text">
             <blockquote>
-              Prior coming to NSS, Austin worked in marketing and live events.
+              Hi there! Thank you for checking out my portfolio. My name is
+              Autin Parker, and I'm currently a web development student at
+              Nashville Software School.
             </blockquote>
             <blockquote>
-              On the side, he has been involved in photo & video editing,
-              graphic design, and music production for the last 9-10 years.
+              I've been involved in marketing and live events for about 10
+              years. Over this time, I've also been involved in photo and video
+              editing, graphic design, and music production.
             </blockquote>
             <blockquote>
-              Since he had always been drawn to technology, he has learned all
-              about many kinds of software and has been learning the basics of
-              coding over the last few years.
+              I graduated from Middle Tennessee State University with a Bachelor
+              of Science in Music Business and a minor in Entrepreneurship. I've
+              always been a bit entrepreneurial, and currently help my wife run
+              an HR consulting business.
             </blockquote>
             <blockquote>
-              This year, he decided to fully commit to a career as a web
-              developer, and was extremely thankful to be able to sign up for
-              the NSS Full-Stack Web Developer Bookcamp.
+              I'm honored and ecstatic to be halfway through my journey at NSS
+              and treasure all the new skills I've been fortunate enough to
+              learn. I've always been into tech, but now I know that it's the
+              career path for me. I really appreciate you taking the time to
+              view my work, and please reach out if you would like to know
+              more.... I'd love to hear from you!
             </blockquote>
           </div>
         </div>
