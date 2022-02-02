@@ -9,7 +9,7 @@ export default function Home() {
       >
         <div className="col-md-6 prof-pic-circ">
           <img
-            src="../../../imgs/austin-parker.png"
+            src="../../../imgs/acp-1-white.png"
             alt="austin-parker"
             className="prof-pic"
           />

@@ -9,9 +9,16 @@ export default function SignIn({ user }) {
       {user === null ? (
         <Spinner style={{ width: '3rem', height: '3rem' }} />
       ) : (
-        <button type="button" className="btn btn-success" onClick={signInUser}>
-          Sign In
-        </button>
+        <div className="d-flex justify-content-end">
+          <button
+            style={{ width: '5px', height: '3px' }}
+            type="button"
+            className="btn btn-outline-secondary mt-2"
+            onClick={signInUser}
+          >
+            {' '}
+          </button>
+        </div>
       )}
     </>
   );

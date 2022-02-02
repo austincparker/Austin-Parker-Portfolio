@@ -13,6 +13,9 @@ const BioCont = styled.div`
 
   .bio-pic {
     width: 100%;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 `;
 
@@ -24,20 +27,20 @@ export default function Bio() {
           <div className="col-lg-3">
             <img
               alt="home studio"
-              src="../../../imgs/home-studio.png"
+              src="../../../imgs/galacticheady.png"
               className="bio-pic"
             />
           </div>
           <div className="col-lg-9 bio-text">
             <blockquote>
               Hi there! Thank you for checking out my portfolio. My name is
-              Autin Parker, and I'm currently a web development student at
+              Austin Parker, and I'm currently a web development student at
               Nashville Software School.
             </blockquote>
             <blockquote>
               I've been involved in marketing and live events for about 10
-              years. Over this time, I've also been involved in photo and video
-              editing, graphic design, and music production.
+              years. Over this time, I've also been hired professionally for
+              photography and videography, graphic design, and music production.
             </blockquote>
             <blockquote>
               I graduated from Middle Tennessee State University with a Bachelor
