@@ -10,6 +10,10 @@ const getProjects = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getProjectsInOrder = () => new Promise((resolve) => {
+  getProjects().then((projects) => resolve(projects.sort((a, b) => (a.projOrder > b.projOrder ? 1 : -1))));
+});
+
 const createProject = (obj) => new Promise((resolve, reject) => {
   axios
     .post(`${baseURL}/projects.json`, obj)
@@ -49,6 +53,7 @@ const updateProject = (firebaseKey, updateObj) => new Promise((resolve, reject) 
 
 export {
   getProjects,
+  getProjectsInOrder,
   createProject,
   deleteProject,
   getSingleProject,
