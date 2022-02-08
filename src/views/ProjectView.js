@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Project from '../components/Project';
-import { getProjects } from '../api/data/projectData';
+import { getProjectsInOrder } from '../api/data/projectData';
 
 export default function ProjectView({ admin }) {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    getProjects().then(setProjects);
+    getProjectsInOrder().then(setProjects);
   }, []);
 
   return (
